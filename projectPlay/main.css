@@ -69,13 +69,14 @@ nav {
     width: 100%;
     height: 95%;
     background-color: #333;
+    box-shadow:5px 10px 15px #333;
 }
 .first-divinmain {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     margin: 0;
 }
 .second-divinmain {
@@ -89,8 +90,8 @@ nav {
     display: inline-block;
 }
 
-.image {
-    width: 500px;
+.image{
+    width: 800px;
     height: 300px;
     object-fit: cover;
     cursor: pointer;
@@ -142,6 +143,7 @@ nav {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .image-item:hover {
@@ -170,6 +172,15 @@ nav {
     padding: 10px;
     border-radius: 5px;
 }
+.maintree{
+    width: 100%;
+    height: 95%;
+    background-color: #918a8a;
+}
+.first-divinmaintree{
+    height: 50vh;
+
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -179,6 +190,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .image{
+        width: 500px;
+        height: 300px;
+    }
     .nav-list {
         flex-direction: column;
         align-items: flex-start;
