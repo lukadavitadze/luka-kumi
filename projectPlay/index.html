@@ -31,7 +31,20 @@
     </header>
 
     <!-- Main Content Section -->
+    <div class="mainOne">
+        <div class="first-divinmain">
+            <div class="second-divinmain">
+                <h1>Top plays</h1>
+                <p>Click photos </p>
+                <div class="image-container">
+                    <img id="image" src="images/pic01.jpg" alt="Click to change image" class="image" onclick="changeImage()">
+                    <div id="text-overlay" class="text-overlay" onclick="changeImage()" >Image 1 Description</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
+    <div class="mainTwo">
         <section class="image-gallery">
             <!-- Image Container with Text Overlay -->
             <div class="image-item">
@@ -99,8 +112,12 @@
                 <div class="overlay">Play 16</div>
             </div>
             <!-- Add more image items here -->
-        </section>
+            </section>
+    </div>
     </main>
 
+
+
+    <script src="script.js"></script>
 </body>
 </html>
