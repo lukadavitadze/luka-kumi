@@ -1,219 +1,191 @@
-/* Global Reset */
-*,
-*::before,
-*::after {
+/* Global styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and HTML Styling with Gradient Background */
-html, body {
+body {
     font-family: 'Arial', sans-serif;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Stylish gradient */
+    background-color: #111;
     color: #fff;
 }
 
-/* Header Styling - Fixed Header */
-header {
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
-    color: white;
-    padding: 15px 30px;
-    width: 100%;
-    position: fixed; /* Make header fixed */
-    top: 0; /* Fix it at the top */
+/* Background Video Styling */
+.background-video {
+    position: fixed;
+    top: 0;
     left: 0;
-    z-index: 1000; /* Ensure it's above other content */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire viewport */
+    z-index: -1; /* Keeps the video in the background */
+    opacity: 0.8; /* Adjust opacity for a slight fade effect */
 }
 
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+header nav {
     display: flex;
-    justify-content: space-between; /* Aligns the content on opposite sides */
+    justify-content:space-evenly;
     align-items: center;
 }
 
 .left-text {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.left-text img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.left-text {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: white;
 }
 
 .nav-list {
+    list-style-type: none;
     display: flex;
     gap: 30px;
-    list-style: none;
 }
 
-.logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.nav-list li {
+    display: inline-block;
 }
-.nav-list li a {
+
+.nav-list a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-.nav-list li a:hover {
-    color: #ffcc00; /* Gold color on hover */
+.nav-list a:hover {
+    color: #f2b400;
 }
 
-/* Main Content Section */
-.mainOne{
-    width: 100%;
-    height: 95%;
-    background-color: #333;
-    box-shadow:5px 10px 15px #333;
+/* Main Section Styles */
+main {
+    padding-top: 150px; /* Adjust padding for space under fixed header */
 }
-.first-divinmain {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    margin: 0;
+
+.mainOne {
+    text-align: center;
+    padding: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    border-radius: 10px;
 }
-.second-divinmain {
-    text-align: start;
-}
+
 .second-divinmain h1{
-    margin:0px 0px 20px 0px;
+    margin-bottom: 15px;
 }
+
 .image-container {
+    width: 700px;
+    height: 300px;
     position: relative;
     display: inline-block;
 }
 
-.image{
-    width: 800px;
+.image {
+    width: 700px;
     height: 300px;
-    object-fit: cover;
-    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
-    border-radius: 5px;
 }
 
 .image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .text-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
-
-.mainTwo {
-    padding: 80px 20px 20px; /* Add top padding to prevent content from being hidden under the fixed header */
-    width: 100%;
+/* Gallery Section */
+.mainTwo{
     display: flex;
     justify-content: center;
 }
-
-/* Image Gallery Grid */
 .image-gallery {
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    max-width: 1200px;
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent white background */
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 40px 20px;
 }
 
-/* Individual Image Items */
 .image-item {
     position: relative;
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    cursor: pointer;
 }
 
 .image-item:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05);
 }
 
 .image-item img {
     width: 100%;
     height: auto;
-    display: block;
-    object-fit: cover;
     border-radius: 10px;
 }
 
-/* Overlay Text on Images */
 .overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-}
-.maintree{
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 95%;
-    background-color: #918a8a;
-}
-.first-divinmaintree{
-    height: 50vh;
-
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .nav-list {
-        gap: 20px;
-    }
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
+.image-item:hover .overlay {
+    opacity: 1;
+}
+.luka{
+    width: 100vh;
+    
+}
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .image{
-        width: 500px;
-        height: 300px;
-    }
-    .nav-list {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .image-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 10px 20px;
-    }
-
-    .nav-list {
-        gap: 15px;
-    }
-
-    .overlay {
-        font-size: 16px;
+    .image-gallery {
+        grid-template-columns: 1fr;
     }
 }
