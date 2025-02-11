@@ -1,10 +1,11 @@
 // Array of images and corresponding text descriptions
 const images = [
-    { src: 'images/pic03.jpg', text: 'Image 6 Description' },
+    { src: 'images/pic14.jpg', text: 'Image 1 Description' },
     { src: 'images/pic02.jpg', text: 'Image 2 Description' },
-    { src: 'images/pic04.jpg', text: 'Image 3 Description' },
-    { src: 'images/pic05.jpg', text: 'Image 4 Description' },
-    { src: 'images/pic06.jpg', text: 'Image 5 Description' }
+    { src: 'images/pic03.jpg', text: 'Image 3 Description' },
+    { src: 'images/pic04.jpg', text: 'Image 4 Description' },
+    { src: 'images/pic05.jpg', text: 'Image 5 Description' },
+    { src: 'images/pic06.jpg', text: 'Image 6 Description' }
 ];
 
 // Current image index
